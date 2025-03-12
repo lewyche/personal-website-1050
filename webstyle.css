@@ -1,0 +1,23 @@
+body{
+    background-color: #008080;
+}
+
+@font-face{
+    font-family: 'Windows95';
+    src: url('w95fa.woff2') format('woff2');
+}
+
+.icon{
+    margin-top: 10px;;
+    margin-left:33px;
+    margin-bottom: 0px;
+}
+
+.small_text{
+    margin-bottom: 20px;
+    margin-left: 27px;
+    margin-top: 0px;
+    font-family: 'Windows95';
+    color: white;
+    font-size: 13px;
+}
