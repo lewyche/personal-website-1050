@@ -21,3 +21,56 @@ body{
     color: white;
     font-size: 13px;
 }
+
+.window{
+    text-align: center;
+    background-color: #c3c3c3;
+    margin: 100px;
+    border: outset;
+    border-width: 4px;
+}
+
+.window_content{
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+#window_paragraph{
+    border: inset;
+    border-width: 4px;
+    padding: 100px;
+    padding-bottom: 200px;
+    background-color: white;
+}
+
+.bottom_bar{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background-color: #c3c3c3;
+    border: outset;
+    border-width: 4px;
+
+}
+
+.window_header{
+    background-color: #000080;
+    text-align: left;
+    font-family: 'Windows95';
+    color: white;
+    padding: 5px;
+}
+
+#start_button{
+    border: outset;
+    border-width: 4px;
+    max-width: 75px;
+    max-height: 45px;
+    margin:2px;
+    font-family: 'Windows95';
+    text-align: center;
+    
+}
