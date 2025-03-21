@@ -2,6 +2,10 @@ body{
     background-color: #008080;
 }
 
+#error_page{
+    background-color: #0033bb;
+}
+
 @font-face{
     font-family: 'Windows95';
     src: url('w95fa.woff2') format('woff2');
@@ -22,10 +26,34 @@ body{
     font-size: 13px;
 }
 
+.main_error_text{
+    text-align: left;
+    margin-left: 600px;
+    font-family: 'Windows95';
+    color: white;
+
+}
+
+#windows_highlight{
+    background-color: #e6ebf8;
+}
+
+#four{
+    margin-bottom: 20px;
+    margin-left: 35px;
+    margin-top: 0px;
+    font-family: 'Windows95';
+    color: white;
+    font-size: 13px;
+  
+}
+
 .window{
     text-align: center;
     background-color: #c3c3c3;
-    margin: 100px;
+    margin-top: 25px;
+    margin-left: 500px;
+    margin-right: 500px;
     border: outset;
     border-width: 4px;
 }
@@ -40,20 +68,21 @@ body{
 #window_paragraph{
     border: inset;
     border-width: 4px;
-    padding: 100px;
+    padding: 22px;
     padding-bottom: 200px;
     background-color: white;
+    margin-bottom: 15px;
 }
 
 .bottom_bar{
     left: 0;
     bottom: 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
     background-color: #c3c3c3;
     border: outset;
     border-width: 4px;
-
+    flex-direction: column-reverse;
 }
 
 .window_header{
@@ -73,4 +102,13 @@ body{
     font-family: 'Windows95';
     text-align: center;
     
+}
+
+.error_div{
+    text-align: center;
+}
+
+.error_text{
+    font-family: 'Windows95';
+    color: white;
 }
