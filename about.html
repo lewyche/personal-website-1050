@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>About projects</title>
+    <link rel="stylesheet" href="./webstyle.css">
+  </head>
+  <body>
+    <main>
+        <a href="home.html" target="blank">
+            <img class="icon" src="My Computer.ico">
+        </a>
+        <br>
+        <a href="home.html" class="small_text">Home Page</a>
+        <br>
+        <a href="two.html" target="blank">
+            <img class="icon" src="Folder.ico">
+        </a>
+        <br>
+        <a href="two.html" class="small_text">Resume</a>
+        <br>
+        <a href="one.html" target="blank">
+            <img class="icon" src="Empty Recycle Bin.ico">
+        </a>
+        <br>
+        <a href="one.html" class="small_text">Projects</a>
+        <br>
+
+        <a href="about.html" target="blank">
+            <img class="icon" src="Recycle Bin with document.ico">
+        </a>
+        <br>
+        <a href="about.html" class="small_text">About</a>
+        <br>
+        <a href="404.html" target="blank">
+            <img class="icon" src="404.ico">
+        </a>
+        <br>
+        <a href="404.html" class="small_text" id="four">404</a>
+
+
+        <div class="window">
+            <div class="window_header">
+                About
+                <img style="float: right"src="x.png">
+            </div>
+            <div class="window_content">
+                <h1>About</h1>
+                <div id="window_paragraph">
+                    <h1>About my projects</h1>
+                    <p>This page is dedicated to elaborating on the planning, process, and release of the projects on the projects page.</p>
+                    <h2>Course Schedule to .ics Website</h2>
+                    <p>This was the first project I made during my first year at the University of Guelph. 
+                        The website allows you to enter course codes and it spits out a .ics file, which can 
+                        be imported into any calendar application of your choice. This project started as a 
+                        fork of another project based on courses at the University of Guelph: https://github.com/AlphaCloudX/Schedule-Optimizer. 
+                        This project calculates the most optimal schedule based on courses given to the program. To do this, 
+                        the author had to scrape the data from all the courses on webAdvisor. As a user of his program, 
+                        I saw an opportunity to solve an issue that many university students face during the first few days 
+                        of a semester, adding your lectures to your calendar application. With his data, it was now feasible 
+                        to create a program that could import your courses into your calendar at the click of a button. 
+                        The issue, however, was figuring out how to do that. At first, I considered using the Google Calendar 
+                        API, however, this would force the user to sign into their Google account, as well as not working for 
+                        other calendar apps, and I know many who use the default calendar app provided by Apple. Eventually, 
+                        I discovered the iCalendar file format. This would allow my program to support every popular calendar 
+                        app and forgo forcing the user to sign in. However, figuring out how to generate such a file proved to 
+                        be somewhat difficult. To create this program, I had to learn a whole new standard, and making a program 
+                        to dynamically generate such a file would prove to be an obstacle. Fortunately, I discovered that Python 
+                        had several libraries dedicated to generating these files for you, taking the burden off your shoulders. 
+                        First, I tried ics.py: <a href="https://pypi.org/project/ics/">https://pypi.org/project/ics/</a>, 
+                        this library did not require you to know anything 
+                        about the internals of the file format, as well as being intuitive to use. It follows the “pythonic” ideology, 
+                        meaning that it is built to follow the conventions and structure of the Python language. However, it was 
+                        missing one key feature, recurring events. This feature was particularly important for a program dedicated 
+                        to importing a course schedule, as lectures and labs repeat weekly at the. Checking the GitHub repo for the 
+                        library, you can see that somebody back in 2013 had requested support for the same feature that I wanted: 
+                        <a href="https://github.com/ics-py/ics-py/issues/14">https://github.com/ics-py/ics-py/issues/14</a>. This means that the developers of the library could not, or 
+                        would not implement this feature for 12 years, likely meaning that the feature would never be completed. 
+                        So, I had no choice but to find another library. The second library that I tried was significantly less 
+                        intuitive to use and required knowledge about the file format, however, it did support recurring events. 
+                        <a href="https://pypi.org/project/icalendar/">https://pypi.org/project/icalendar/</a> Eventually, I was able to finish my command line program, adding onto 
+                        the project that AlphaCloudX created, allowing the user to import their schedule after optimizing it. 
+                        After this, I created a pull request on his repo and was able to contribute to the project that he made. 
+                        However, I realized that the average student, especially those who aren’t in Computer Science, would not 
+                        want to deal with the hassle of running a command line program. Therefore, I decided to separate the export 
+                        feature into a website of its own. To do this, I had to learn a Python “microframework”, Flask which would 
+                        allow me to run Python code on the web. Development of the website generally proceeded smoothly after I had 
+                        learned enough Flask for a text box and a button. However, to make the website accessible to the rest of the 
+                        world, I had to host it somewhere. I decided on pythonanywhere: <a href="https://www.pythonanywhere.com/">https://www.pythonanywhere.com/</a>, which allowed 
+                        me to host my website for free. Deploying my website was an eye-opening experience. First of all, it made me 
+                        thankful that I had switched my main operating system on my laptop to Linux, as setting up my website required 
+                        extensive use of the operating system. Secondly, I had to cope with the differences between the way the project 
+                        was set up on my computer and the way it was set up on Pythonanywhere’s servers. Eventually, I was able to get 
+                        the website set up and working and I shared my website with my friends to use just in time before the second 
+                        semester began, and I received around 100 page visits. This entire project was completed during the break between 
+                        my first and second semesters, and I am pretty proud to have created something that was of genuine use to students at the University of Guelph.
+                    </p>
+                    <h2>Jpeg Quantization Table Editor</h2>
+                    <p>
+                        Every Jpeg image has something called a Quantization Table, which is a table used to quantize Discrete Cosine Transform 
+                        coefficients. These are used in Jpeg images to adjust the quality of the image. They are stored within the binary data 
+                        of the file and can be edited with a hex editor. They are meant to be manipulated with an algorithm, but when edited manually, 
+                        some … freaky things can happen to the image. After messing around with Jpegs with a hex editor, I sought to create a more 
+                        convenient way to edit the quantization tables of an image. Despite what is listed in the projects section, I first made my 
+                        Jpeg Quantization Table Editor in Godot. Godot is an open-source game engine that happened to have a robust enough UI system 
+                        that allowed me to create working desktop applications. I started and completed the Godot version of the project sometime during 
+                        high school but I was ultimately somewhat unsatisfied with the final product. Firstly, the project was somewhat basic and unintuitive 
+                        to use and was never deployed as a full desktop application. That meant anybody who wanted to use my program had to go through the 
+                        trouble of loading my project through the Godot editor, instead of just running an executable like a normal program. However, in my 
+                        senior year of high school came an opportunity to revamp the project. Due to a somewhat unorthodox teacher, I was allowed, as a final 
+                        project of my Computer Science class, to create whatever I wanted. Therefore, I decided to remake my project in the language of the 
+                        course, Java. I had to use a framework called Processing, geared towards beginners of programming. Using this opportunity, I revamped 
+                        my entire project, making it easier to use, adding a quality slider and making the images easier to view. However, the problem of being 
+                        undeployable was still there. Since Processing was geared towards beginners, projects made in Processing were never meant to be used by 
+                        people other than yourself. Then came the second semester of university, after I had finished the ScheduleToIcs website, I was looking 
+                        for another project to work on. Despite the editor's half-baked status, I still thought it was an interesting concept, and I was almost 
+                        certainly the first person to have thought of creating a program for editing the quantization tables for Jpeg files, so I couldn’t resist 
+                        remaking it for a third time. This time, I used Qt, a cross-platform application development framework for C++. This version of the project 
+                        is the most fully formed yet, users are now able to import and export their images with the UI, and finally, the project is deployed on both 
+                        Windows and Linux. The experience of deploying a desktop application turned out to be much more involved than I thought, with differences between 
+                        Windows and Linux. Turns out, you need to actually own a system running Windows to deploy to Windows and likewise for Linux. That is why I was 
+                        unable to create a version for Macintosh because I did not own an Apple product that ran it. Furthermore, deploying on Linux added an extra layer 
+                        of complication, due to the sheer number of distros. Therefore, I decided to make my program an AppImage, which ran on all distros. The Qt version 
+                        of my Quantization Table Editor is the most complete and accessible version, which I would be proud to have anybody interested in how Jpegs work, 
+                        and use. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_bar">
+            <div id="start_button">
+                <img src="Windows logo (without text).ico">
+                Start
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
